@@ -1,4 +1,4 @@
-# mobilepay-graph
+# Mobilepay Graph
 MATLAB graphing tool for MobilePay box payments
 
 Graphs only in Finnish, working on translations. Should be easy to fix if familiar with MATLAB programming.
