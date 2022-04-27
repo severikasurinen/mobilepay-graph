@@ -1,18 +1,18 @@
+close all
+clear all
+
 % OPTIONS
 
 lang=1; % 1 -> Finnish; 2 -> English     # Work in progress #
 
 yyyy=[2022 2022]; % year range - start end
 mm=[04 04]; % month range - start end
-dd=[27 29]; % day range - start end
-hh=[15 14]; % hour range - start end
+dd=[27 30]; % day range - start end
+hh=[19 16]; % hour range - start end
 
 % OPTIONS
 
 
-
-close all
-clear all
 
 % define words
 dictionary=["Aika" "Potti" "Lineaarinen sovite" "Luottamusvälit" "Osallistujat" "Odotusarvo" "Sija" "Maksu";
