@@ -10,5 +10,6 @@ The graphs are currently only in Finnish. Should be easy to fix if familiar with
 2. Set the date range in the options.
 3. Download an .xlsx file from MobilePay to the same folder and rename the file as "mp.xlsx".
 4. Run the script in MATLAB.
-5. Save the plots as .png files, take a screenshot of the sponsor table, and crop it.
-6. Profit.
+5. Plots can be found in the same folder in the files "mp_payments.png", "mp_participants.png", and "mp_expected_value.png".
+6. Take a screenshot of the sponsor table, and crop it.
+7. Profit.
