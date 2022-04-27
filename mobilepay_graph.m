@@ -57,13 +57,14 @@ axis tight;
 xlim([t(1) datenum(yyyy(2),mm(2),dd(2),hh(2),0,0)]);
 %ylim([0 1000]);   % set limits for y axis
 grid on, grid minor;
-Ax = gca;
 xticks(linspace(tmin,tmax,days*6+1)')
 xticklabels({datestr(linspace(tmin,tmax,days*6+1), 'yyyy-mm-dd HH:MM')})
 xlabel("Aika"), ylabel("Potti (€)");
 title(strjoin(["Potti: " num2str(sprintf('%0.2f',y1(height(y1)))) " €"]));
 legend("Data", "Lineaarinen sovite", "95% luottamusvälit");
 hold off;
+ax=gca;
+exportgraphics(ax, 'mp_payments.png');
 
 
 
@@ -87,13 +88,14 @@ axis tight;
 xlim([t(1) datenum(yyyy(2),mm(2),dd(2),hh(2),0,0)]);
 %ylim([0 250]);   % set limits for y axis
 grid on, grid minor;
-Ax = gca;
 xticks(linspace(tmin,tmax,days*6+1)')
 xticklabels({datestr(linspace(tmin,tmax,days*6+1), 'yyyy-mm-dd HH:MM')})
 xlabel("Aika"), ylabel("Osallistujat");
 title(strjoin(["Osallistujat: " num2str(y2(height(y2)))]));
 legend("Data", "Lineaarinen sovite", "95% luottamusvälit");
 hold off;
+ax=gca;
+exportgraphics(ax, 'mp_participants.png');
 
 
 
@@ -120,13 +122,14 @@ axis tight;
 xlim([t(1) datenum(yyyy(2),mm(2),dd(2),hh(2),0,0)]);
 %ylim([0 8]);   % set limits for y axis
 grid on, grid minor;
-Ax = gca;
 xticks(linspace(tmin,tmax,days*6+1)')
 xticklabels({datestr(linspace(tmin,tmax,days*6+1), 'yyyy-mm-dd HH:MM')})
 xlabel("Aika"), ylabel("Odotusarvo (€)");
 title(strjoin(["Odotusarvo: " num2str(sprintf('%0.2f',y3(height(y3)))) " €"]));
 legend("Data", "Lineaarinen sovite", "95% luottamusvälit");
 hold off;
+ax=gca;
+exportgraphics(ax, 'mp_expected_value.png');
 
 
 
