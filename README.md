@@ -1,7 +1,8 @@
 # MobilePay Graph
 MATLAB graphing tool for raffles using MobilePay box payments
 
-Graphs only in Finnish, working on translations. Should be easy to fix if familiar with MATLAB programming.
+Requires a minimum of 2 payments at different times to work.
+The graphs are currently only in Finnish. Should be easy to fix if familiar with MATLAB programming.
 
 
 # Instructions
