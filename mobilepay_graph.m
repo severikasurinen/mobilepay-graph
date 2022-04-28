@@ -5,6 +5,9 @@ clear all
 
 lang=1; % 1 -> Finnish; 2 -> English     # Work in progress #
 
+
+fee=0.5; % minimum payment to participate
+
 yyyy=[2022 2022]; % year range - start end
 mm=[04 04]; % month range - start end
 dd=[27 30]; % day range - start end
@@ -109,7 +112,7 @@ for i = 2:height(data)
     end
 end
 
-y3=y1 ./ cum_part - 1;
+y3=y1 ./ cum_part - fee;
 
 figure
 plot(x3,y3,'xr'), hold on;
@@ -144,7 +147,7 @@ for i = 1:height(U)
     sponsor_table.maksu(find(sponsor_table.id==U.id(i))) = U.sum_maksu(i);
 end
 
-sponsor_table(sponsor_table.maksu <= 1,:) = [];
+sponsor_table(sponsor_table.maksu <= fee,:) = [];
 sponsor_table = sortrows(sponsor_table,{'maksu','aika'}, {'descend','ascend'});
 sponsor_table.aika = [datestr(sponsor_table.aika, 'yyyy-mm-dd HH:MM')];
 sponsor_table = addvars(sponsor_table,[1:1:height(sponsor_table)]','NewVariableNames','sija','Before','id');
